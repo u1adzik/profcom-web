@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Профком | Список студентов</title>
+        <link rel="stylesheet" href="assets/main.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <header class="list-header">
+            <div class="st-name">Анастасия Александровна Шайпак</div>
+        </header>
+        <div class="list-container">
+            <div class="list-sidebar">
+                <nav class="sidebar-nav">
+                    <ul class="sidebar-wrapper">
+                        <li class="sidebar-item selected"><a href="#">
+                            <span class="material-symbols-outlined">database</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item"><a href="#">
+                            <span class="material-symbols-outlined">draft</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item"><a href="#">
+                            <span class="material-symbols-outlined">note_add</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item"><a href="#">
+                            <span class="material-symbols-outlined">settings</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item"><a href="#">
+                            <span class="material-symbols-outlined">cancel</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="student-list">
+                <table class="student-list-wrapper" cellspacing="0" cellpadding="15">
+                    <tbody>
+                        <tr class="student-list-header">
+                            <td class="student-list-number">&#8470;</td>
+                            <td class="student-list-name">ФИО</td>
+                            <td class="student-list-date">Дата вступления</td>
+                            <td class="student-list-org">Цеховая организация</td>
+                            <td class="student-list-act-number">&#8470; личного дела</td>
+                        </tr>
+                        <tr class="student-list-person">
+                            <td class="student-list-number">1</td>
+                            <td class="student-list-name">Шайпак Анастасия Александровна</td>
+                            <td class="student-list-date"><input type="date"></td>
+                            <td class="student-list-org">ППО студентов БГУИР</td>
+                            <td class="student-list-act-number">2281337</td>
+                        </tr>
+                        <tr class="student-list-person">
+                            <td class="student-list-number">2</td>
+                            <td class="student-list-name">Шайпак Анастасия Александровна</td>
+                            <td class="student-list-date"><input type="date"></td>
+                            <td class="student-list-org">ППО студентов БГУИР</td>
+                            <td class="student-list-act-number">2281337</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="list-filters">
+                <p>Фильтры</p>
+                <ul class="student-filters">
+                    <li class="student-filter"><input type="text" placeholder="&#8470; личного дела"></li>
+                    <li class="student-filter"><input type="text" placeholder="Фамилия"></li>
+                    <li class="student-filter"><input type="text" placeholder="Год вступления"></li>
+                    <li class="student-filter"><input type="text" placeholder="Цеховая организация"></li>
+                    <li class="student-filter"><input type="text" placeholder="Пол"></li>
+                    <li class="student-filter"><input type="text" placeholder="Год рождения"></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

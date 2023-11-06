@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логин | Профком</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-box-header">
+            <p class="login-greeting">Здравствуйте!</p>
+            <p class="login-warning">Пожалуйста, войдите в аккаунт.</p>
+        </div>
+        <div class="login-section">
+            <p class="login-label">
+                Логин
+                <a href="#" class="icon icon-info"><span class="material-symbols-outlined">info</span>
+            </p>
+            </a>
+            <input class="login-input" type="text" placeholder="Введите логин">
+        </div>
+        <div class="password-section">
+            <p class="login-label">Пароль</p>
+            <input id="passwd-input" class="login-input" type="password" placeholder="Введите пароль">
+            <a href="#" onclick="passwdToggle();">
+                <span id="passwd-icon" class="material-symbols-outlined icon">visibility_off</span>
+            </a>
+            <a href="#" class="password-request">Забыли пароль?</a>
+        </div>
+        <button class="login-btn">
+            <a href="studentlist.html">Войти</a>
+        </button>
+    </div>
+</body>
+</html>
