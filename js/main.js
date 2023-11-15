@@ -15,3 +15,19 @@ function passwdToggle() {
     }
     
 }
+
+function personInfo() {
+    let x = document.getElementById("student-list");
+    x.setAttribute("hidden", true);
+
+    let y = document.getElementById("student-additional-info");
+    y.style.cssText = "opacity: 1";
+}
+
+function showList() {
+    let y = document.getElementById("student-additional-info");
+    y.style.cssText = "opacity: 0";
+
+    let x = document.getElementById("student-list");
+    x.removeAttribute("hidden");
+}

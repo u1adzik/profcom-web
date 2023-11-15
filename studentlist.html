@@ -1,82 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Профком | Список студентов</title>
-        <link rel="stylesheet" href="assets/main.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <script src="js/main.js"></script>
-    </head>
-    <body>
-        <header class="list-header">
-            <div class="st-name">Анастасия Александровна Шайпак</div>
-        </header>
-        <div class="list-container">
-            <div class="list-sidebar">
-                <nav class="sidebar-nav">
-                    <ul class="sidebar-wrapper">
-                        <li class="sidebar-item selected"><a href="#">
-                            <span class="material-symbols-outlined">database</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item"><a href="#">
-                            <span class="material-symbols-outlined">draft</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item"><a href="#">
-                            <span class="material-symbols-outlined">note_add</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item"><a href="#">
-                            <span class="material-symbols-outlined">settings</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item"><a href="#">
-                            <span class="material-symbols-outlined">cancel</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="student-list">
-                <table class="student-list-wrapper" cellspacing="0" cellpadding="15">
-                    <tbody>
-                        <tr class="student-list-header">
-                            <td class="student-list-number">&#8470;</td>
-                            <td class="student-list-name">ФИО</td>
-                            <td class="student-list-date">Дата вступления</td>
-                            <td class="student-list-org">Цеховая организация</td>
-                            <td class="student-list-act-number">&#8470; личного дела</td>
-                        </tr>
-                        <tr class="student-list-person">
-                            <td class="student-list-number">1</td>
-                            <td class="student-list-name">Шайпак Анастасия Александровна</td>
-                            <td class="student-list-date"><input type="date"></td>
-                            <td class="student-list-org">ППО студентов БГУИР</td>
-                            <td class="student-list-act-number">2281337</td>
-                        </tr>
-                        <tr class="student-list-person">
-                            <td class="student-list-number">2</td>
-                            <td class="student-list-name">Шайпак Анастасия Александровна</td>
-                            <td class="student-list-date"><input type="date"></td>
-                            <td class="student-list-org">ППО студентов БГУИР</td>
-                            <td class="student-list-act-number">2281337</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="list-filters">
-                <p>Фильтры</p>
-                <ul class="student-filters">
-                    <li class="student-filter"><input type="text" placeholder="&#8470; личного дела"></li>
-                    <li class="student-filter"><input type="text" placeholder="Фамилия"></li>
-                    <li class="student-filter"><input type="text" placeholder="Год вступления"></li>
-                    <li class="student-filter"><input type="text" placeholder="Цеховая организация"></li>
-                    <li class="student-filter"><input type="text" placeholder="Пол"></li>
-                    <li class="student-filter"><input type="text" placeholder="Год рождения"></li>
-                </ul>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профком | Список студентов</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header class="list-header">
+        <div class="st-name">Анастасия Александровна Шайпак</div>
+    </header>
+    <div class="list-sidebar">
+        <nav class="sidebar-nav">
+            <ul class="sidebar-wrapper">
+                <li class="sidebar-item selected"><a href="studentlist.html">
+                        <span class="material-symbols-outlined">database</span>
+                    </a>
+                </li>
+                <li class="sidebar-item"><a href="#">
+                        <span class="material-symbols-outlined">draft</span>
+                    </a>
+                </li>
+                <li class="sidebar-item"><a href="upload.html">
+                        <span class="material-symbols-outlined">note_add</span>
+                    </a>
+                </li>
+                <li class="sidebar-item"><a href="#">
+                        <span class="material-symbols-outlined">settings</span>
+                    </a>
+                </li>
+                <li class="sidebar-item"><a href="#">
+                        <span class="material-symbols-outlined">cancel</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="list-wrapper">
+        <div class="student-list">
+            <table class="student-list-wrapper" cellspacing="0" cellpadding="15" id="student-list">
+                <tbody>
+                    <tr class="student-list-header">
+                        <td class="student-list-number">&#8470;</td>
+                        <td class="student-list-name">ФИО</td>
+                        <td class="student-list-date">Дата вступления</td>
+                        <td class="student-list-org">Цеховая организация</td>
+                        <td class="student-list-act-number">&#8470; личного дела</td>
+                    </tr>
+                    <tr class="student-list-person" onclick="personInfo();">
+                        <td class="student-list-number">1</td>
+                        <td class="student-list-name">Шайпак Анастасия Александровна</td>
+                        <td class="student-list-date"><input type="date"></td>
+                        <td class="student-list-org">ППО студентов БГУИР</td>
+                        <td class="student-list-act-number">2281337</td>
+                    </tr>
+                    <tr class="student-list-person" onclick="personInfo();">
+                        <td class="student-list-number">2</td>
+                        <td class="student-list-name">Гинько Владислав Алексеевич</td>
+                        <td class="student-list-date"><input type="date"></td>
+                        <td class="student-list-org">ППО студентов БГУИР</td>
+                        <td class="student-list-act-number">2281337</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="student-info-section" id="student-additional-info">
+                <div class="student-info-header">
+                    <span>Личная карточка</span>
+                    <button onclick="showList();">
+                        <span class="material-symbols-outlined"> arrow_back_ios </span>
+                    </button>
+                </div>
+                <div class="student-info">
+                    <div class="student-image">
+                        <img src='https://dummyimage.com/150x200.png?text=student' alt='' />
+                    </div>
+                    <div class="student-private-info">
+                        <div class="info-header">
+                            Личная информация
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Фамилия:</td>
+                                    <td>Песецкая</td>
+                                </tr>
+                                <tr>
+                                    <td>Имя:</td>
+                                    <td>Анна</td>
+                                </tr>
+                                <tr>
+                                    <td>Отчество:</td>
+                                    <td>Сергеевна</td>
+                                </tr>
+                                <tr>
+                                    <td>Дата рождения:</td>
+                                    <td><input type="date"></td>
+                                </tr>
+                                <tr>
+                                    <td>Пол:</td>
+                                    <td>Женский</td>
+                                </tr>
+                                <tr>
+                                    <td>С.П.:</td>
+                                    <td>Замужем</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="student-member-info">
+                        <div class="info-header">
+                            Членская информация
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Цех. орг.:</td>
+                                    <td>Lorem, ipsum dolor.</td>
+                                </tr>
+                                <tr>
+                                    <td>Дата вступления:</td>
+                                    <td><input type="date"></td>
+                                </tr>
+                                <tr>
+                                    <td>Дата упл. взносов:</td>
+                                    <td><input type="date"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="info-header">
+                            Контакты
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>ЦЭл. почта:</td>
+                                    <td>example@mail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Номер телефона:</td>
+                                    <td>+375333419222</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="student-activity">
+                    <div class="activity-header">
+                        <p>Активность</p>
+                    </div>
+                    <div class="student-credits">
+                        <p>Заслуги</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span>Lorem, ipsum.</span>
+                                        <span>05.10.2004</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Lorem, ipsum.</span>
+                                        <span>05.10.2004</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Lorem, ipsum.</span>
+                                        <span>05.10.2004</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Lorem, ipsum.</span>
+                                        <span>05.10.2004</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
+        <div class="list-filters">
+            <p>Фильтры</p>
+            <ul class="student-filters">
+                <li class="student-filter"><input type="text" placeholder="&#8470; личного дела"></li>
+                <li class="student-filter"><input type="text" placeholder="Фамилия"></li>
+                <li class="student-filter"><input type="text" placeholder="Год вступления"></li>
+                <li class="student-filter"><input type="text" placeholder="Цеховая организация"></li>
+                <li class="student-filter"><input type="text" placeholder="Пол"></li>
+                <li class="student-filter"><input type="text" placeholder="Год рождения"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
 </html>
